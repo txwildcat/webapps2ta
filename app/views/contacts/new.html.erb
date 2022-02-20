@@ -1,7 +1,6 @@
 <h1>New Contact</h1>
 
 <%= form_with model: @contact do |form| %>
-
   <p>
     <%= form.label "first_name" %>
     <%= form.text_field "first_name" %>
@@ -9,11 +8,12 @@
     <%= form.text_field "last_name" %>
   </p>
   <p>
-    <%= form.label "company_id" %>
-    <%= form.text_field "company_id" %>        
+    <%= form.label "email" %>
+    <%= form.text_field "email" %>
+    <%= form.label "phone_number" %>
+    <%= form.text_field "phone_number" %>
   </p>
-  <p>
-    <%= form.hidden_field "comapny_id" %>
-  </p>
+  <!-- So we can transfer state from the previous action to the next -->
+  <%= form.hidden_field "company_id" %>
   <%= form.submit %>
 <% end %>

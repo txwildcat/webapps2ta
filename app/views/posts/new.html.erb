@@ -2,21 +2,19 @@
 
 <%= form_with model: @post do |form| %>
   <p>
-  <%= form.label "author" %>
-  <%= form.text_field "author" %>
+    <%= form.label "author" %>
+    <%= form.text_field "author" %>
+  </p<>
+
+  <p>
+    <%= form.label "body" %>
+    <%= form.text_field "body" %>
   </p>
 
   <p>
-  <%= form.label "body" %>
-  <%= form.text_field "body" %>
+    <%= form.label "image" %>
+    <%= form.text_field "image" %>
   </p>
 
-  <p>
-  <%= form.label "image" %>
-  <%= form.text_field "image" %>
-  </p> 
-
-  <p>
-  <%= form.submit %>
-  </p>
+  <p><%= form.submit %></p>
 <% end %>
